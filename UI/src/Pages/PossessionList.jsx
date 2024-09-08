@@ -34,6 +34,7 @@ function ListePossessions() {
       const response = await axios.patch(`https://backend-62yk.onrender.com/possession/${libelle}`);
       console.log('Réponse du serveur:', response.data);
       
+      // Mise à jour des possessions dans l'état
       setPossessions((prev) =>
         prev.map((possession) =>
           possession.libelle === libelle ? { ...possession, dateFin: new Date().toISOString() } : possession

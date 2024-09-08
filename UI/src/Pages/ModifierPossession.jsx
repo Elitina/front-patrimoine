@@ -38,7 +38,7 @@ function ModifierPossession() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://backend-62yk.onrender.com/possession${initialLibelle}`, {
+      await axios.put(`https://backend-62yk.onrender.com/possession${initialLibelle}/update`, {
         libelle,
         valeur,
         dateDebut,
