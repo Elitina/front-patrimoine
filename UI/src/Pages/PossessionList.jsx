@@ -14,7 +14,7 @@ function ListePossessions() {
   useEffect(() => {
     const fetchPossessions = async () => {
       try {
-        const response = await axios.get('/api/possession');
+        const response = await axios.get('https://backend-62yk.onrender.com/possession');
         console.log('Possessions récupérées:', response.data);
         setPossessions(response.data);
       } catch (error) {
@@ -31,7 +31,7 @@ function ListePossessions() {
   const handleCloturer = async (libelle) => {
     try {
       console.log(`Tentative de clôture pour : ${libelle}`);
-      const response = await axios.patch(`/api/possession/${libelle}/close`);
+      const response = await axios.patch(`https://backend-62yk.onrender.com/possession/${libelle}/close`);
       console.log('Réponse du serveur:', response.data);
       
       // Mise à jour des possessions dans l'état

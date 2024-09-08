@@ -14,9 +14,7 @@ function PatrimoineGraphe() {
     e.preventDefault();
     try {
       console.log('Envoi de la requête avec:', { dateDebut, dateFin, interval });
-      
-      // Utilisez l'URL complète de votre backend, par exemple :
-      const response = await axios.get('/api/patrimoine/range', {
+      const response = await axios.get('https://backend-62yk.onrender.com/range', {
         params: { dateDebut, dateFin, interval }
       });
 

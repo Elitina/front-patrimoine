@@ -17,7 +17,7 @@ function ModifierPossession() {
   useEffect(() => {
     const fetchPossession = async () => {
       try {
-        const response = await axios.get(`/api/possession/${initialLibelle}`);
+        const response = await axios.get(`https://backend-62yk.onrender.com/${initialLibelle}`);
         const { valeur, dateDebut, dateFin, tauxAmortissement } = response.data;
         setLibelle(response.data.libelle || '');
         setValeur(valeur || '');
@@ -38,7 +38,7 @@ function ModifierPossession() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/possession/${initialLibelle}`, {
+      await axios.put(`https://backend-62yk.onrender.com/${initialLibelle}`, {
         libelle,
         valeur,
         dateDebut,
