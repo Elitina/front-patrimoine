@@ -23,7 +23,7 @@ function CreatePossession() {
 
       const possesseurObject = { possesseur };
 
-      await axios.post('/api/possession', {
+      await axios.post('https://backend-62yk.onrender.com/possession', {
         possesseur: possesseurObject,
         libelle,
         valeur: valeurNumerique,
