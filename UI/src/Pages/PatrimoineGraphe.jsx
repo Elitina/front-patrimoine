@@ -14,7 +14,7 @@ function PatrimoineGraphe() {
     e.preventDefault();
     try {
       console.log('Envoi de la requête avec:', { dateDebut, dateFin, interval });
-      const response = await axios.get('https://backend-62yk.onrender.com/range', {
+      const response = await axios.get('https://backend-62yk.onrender.com/patrimoine/range', {
         params: { dateDebut, dateFin, interval }
       });
 

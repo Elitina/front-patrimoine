@@ -13,7 +13,7 @@ function Patrimoine() {
     e.preventDefault();
     try {
       console.log('Sending request with date:', date); 
-      const response = await axios.get('https://backend-62yk.onrender.com/date', { params: { date } });
+      const response = await axios.get('https://backend-62yk.onrender.com/patrimoine/date', { params: { date } });
       console.log('Response data:', response.data); 
   
       const { totalValue, possessions } = response.data;
